@@ -1,0 +1,753 @@
+[Configuration] Training on dataset: facescrub
+  Len_bits: 36
+ Batch_size: 256
+ learning rate: 0.100
+ num_books: 6
+ num_words: 64
+HyperParams:
+margin: 0.500	 miu: 0.1000
+==> Building model..
+number of identities:  2
+number of training images:  34288
+number of test images:  8836
+number of training batches per epoch: 134
+number of testing batches per epoch: 35
+num. of codebooks:  6
+num. of words per book:  64
+dim. of word:  86
+code length: 36-bit 	 learning rate: 0.100 	 scale length: 20 	 penalty margin: 0.50 	 balance_weight: 0.100
+==> Epoch: 1
+Epoch 1 |  Loss: 5.0297
+Epoch Completed in 59min 46s
+Saving..
+==> Epoch: 2
+Epoch 2 |  Loss: 1.8444
+Epoch Completed in 229min 10s
+Saving..
+==> Epoch: 3
+Epoch 3 |  Loss: 1.0565
+Epoch Completed in 81min 32s
+Saving..
+==> Epoch: 4
+Epoch 4 |  Loss: 0.8871
+Epoch Completed in 11min 18s
+Saving..
+==> Epoch: 5
+Epoch 5 |  Loss: 0.7660
+Epoch Completed in 24min 6s
+Code generated in 0min 10s 
+[Evaluate Phase] MAP: 94.21% top_k: 96.62%
+Saving..
+==> Epoch: 6
+Epoch 6 |  Loss: 0.7005
+Epoch Completed in 11min 15s
+Saving..
+==> Epoch: 7
+Epoch 7 |  Loss: 0.6767
+Epoch Completed in 11min 16s
+Saving..
+==> Epoch: 8
+Epoch 8 |  Loss: 0.6241
+Epoch Completed in 11min 17s
+Saving..
+==> Epoch: 9
+Epoch 9 |  Loss: 0.6081
+Epoch Completed in 11min 25s
+Saving..
+==> Epoch: 10
+Epoch 10 |  Loss: 0.5551
+Epoch Completed in 11min 18s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 96.01% top_k: 93.82%
+Saving..
+==> Epoch: 11
+Epoch 11 |  Loss: 0.5420
+Epoch Completed in 11min 15s
+Saving..
+==> Epoch: 12
+Epoch 12 |  Loss: 0.5614
+Epoch Completed in 11min 13s
+==> Epoch: 13
+Epoch 13 |  Loss: 0.5744
+Epoch Completed in 11min 16s
+==> Epoch: 14
+Epoch 14 |  Loss: 0.5120
+Epoch Completed in 11min 14s
+Saving..
+==> Epoch: 15
+Epoch 15 |  Loss: 0.5212
+Epoch Completed in 11min 17s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 94.97% top_k: 94.93%
+==> Epoch: 16
+Epoch 16 |  Loss: 0.5003
+Epoch Completed in 11min 16s
+Saving..
+==> Epoch: 17
+Epoch 17 |  Loss: 0.5292
+Epoch Completed in 11min 15s
+==> Epoch: 18
+Epoch 18 |  Loss: 0.4942
+Epoch Completed in 11min 17s
+Saving..
+==> Epoch: 19
+Epoch 19 |  Loss: 0.4452
+Epoch Completed in 11min 19s
+Saving..
+==> Epoch: 20
+Epoch 20 |  Loss: 0.4602
+Epoch Completed in 11min 19s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 95.82% top_k: 96.45%
+==> Epoch: 21
+Epoch 21 |  Loss: 0.4751
+Epoch Completed in 11min 20s
+==> Epoch: 22
+Epoch 22 |  Loss: 0.4432
+Epoch Completed in 11min 19s
+Saving..
+==> Epoch: 23
+Epoch 23 |  Loss: 0.4556
+Epoch Completed in 11min 16s
+==> Epoch: 24
+Epoch 24 |  Loss: 0.4446
+Epoch Completed in 11min 15s
+==> Epoch: 25
+Epoch 25 |  Loss: 0.4297
+Epoch Completed in 11min 16s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 96.05% top_k: 97.63%
+Saving..
+==> Epoch: 26
+Epoch 26 |  Loss: 0.4347
+Epoch Completed in 11min 17s
+==> Epoch: 27
+Epoch 27 |  Loss: 0.4145
+Epoch Completed in 11min 17s
+Saving..
+==> Epoch: 28
+Epoch 28 |  Loss: 0.4824
+Epoch Completed in 11min 14s
+==> Epoch: 29
+Epoch 29 |  Loss: 0.4164
+Epoch Completed in 11min 16s
+==> Epoch: 30
+Epoch 30 |  Loss: 0.3881
+Epoch Completed in 11min 17s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 97.05% top_k: 95.01%
+Saving..
+==> Epoch: 31
+Epoch 31 |  Loss: 0.4142
+Epoch Completed in 11min 14s
+==> Epoch: 32
+Epoch 32 |  Loss: 0.4011
+Epoch Completed in 11min 19s
+==> Epoch: 33
+Epoch 33 |  Loss: 0.3975
+Epoch Completed in 11min 14s
+==> Epoch: 34
+Epoch 34 |  Loss: 0.3840
+Epoch Completed in 11min 18s
+Saving..
+==> Epoch: 35
+Epoch 35 |  Loss: 0.4074
+Epoch Completed in 11min 14s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 95.36% top_k: 94.50%
+==> Epoch: 36
+Epoch 36 |  Loss: 0.3185
+Epoch Completed in 11min 18s
+Saving..
+==> Epoch: 37
+Epoch 37 |  Loss: 0.2390
+Epoch Completed in 12min 45s
+Saving..
+==> Epoch: 38
+Epoch 38 |  Loss: 0.2356
+Epoch Completed in 12min 44s
+Saving..
+==> Epoch: 39
+Epoch 39 |  Loss: 0.1985
+Epoch Completed in 13min 13s
+Saving..
+==> Epoch: 40
+Epoch 40 |  Loss: 0.2506
+Epoch Completed in 13min 27s
+Code generated in 0min 12s 
+[Evaluate Phase] MAP: 97.87% top_k: 97.77%
+==> Epoch: 41
+Epoch 41 |  Loss: 0.2405
+Epoch Completed in 12min 38s
+==> Epoch: 42
+Epoch 42 |  Loss: 0.2329
+Epoch Completed in 12min 40s
+==> Epoch: 43
+Epoch 43 |  Loss: 0.2476
+Epoch Completed in 11min 18s
+==> Epoch: 44
+Epoch 44 |  Loss: 0.2520
+Epoch Completed in 11min 20s
+==> Epoch: 45
+Epoch 45 |  Loss: 0.2564
+Epoch Completed in 11min 10s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 96.77% top_k: 96.87%
+==> Epoch: 46
+Epoch 46 |  Loss: 0.2979
+Epoch Completed in 11min 10s
+==> Epoch: 47
+Epoch 47 |  Loss: 0.2314
+Epoch Completed in 11min 13s
+==> Epoch: 48
+Epoch 48 |  Loss: 0.2747
+Epoch Completed in 11min 9s
+==> Epoch: 49
+Epoch 49 |  Loss: 0.3305
+Epoch Completed in 11min 12s
+==> Epoch: 50
+Epoch 50 |  Loss: 0.2669
+Epoch Completed in 11min 9s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 97.32% top_k: 96.25%
+==> Epoch: 51
+Epoch 51 |  Loss: 0.3143
+Epoch Completed in 11min 9s
+==> Epoch: 52
+Epoch 52 |  Loss: 0.2692
+Epoch Completed in 11min 10s
+==> Epoch: 53
+Epoch 53 |  Loss: 0.2643
+Epoch Completed in 11min 13s
+==> Epoch: 54
+Epoch 54 |  Loss: 0.2097
+Epoch Completed in 11min 9s
+==> Epoch: 55
+Epoch 55 |  Loss: 0.1862
+Epoch Completed in 11min 9s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 97.45% top_k: 97.33%
+Saving..
+==> Epoch: 56
+Epoch 56 |  Loss: 0.2245
+Epoch Completed in 11min 12s
+==> Epoch: 57
+Epoch 57 |  Loss: 0.2990
+Epoch Completed in 17min 38s
+==> Epoch: 58
+Epoch 58 |  Loss: 0.2867
+Epoch Completed in 28min 43s
+==> Epoch: 59
+Epoch 59 |  Loss: 0.2428
+Epoch Completed in 14min 4s
+==> Epoch: 60
+Epoch 60 |  Loss: 0.2391
+Epoch Completed in 12min 30s
+Code generated in 0min 13s 
+[Evaluate Phase] MAP: 96.96% top_k: 97.16%
+==> Epoch: 61
+Epoch 61 |  Loss: 0.2781
+Epoch Completed in 14min 16s
+==> Epoch: 62
+Epoch 62 |  Loss: 0.2630
+Epoch Completed in 14min 43s
+==> Epoch: 63
+Epoch 63 |  Loss: 0.2507
+Epoch Completed in 13min 56s
+==> Epoch: 64
+Epoch 64 |  Loss: 0.2472
+Epoch Completed in 13min 45s
+==> Epoch: 65
+Epoch 65 |  Loss: 0.2412
+Epoch Completed in 14min 38s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 98.70% top_k: 99.08%
+==> Epoch: 66
+Epoch 66 |  Loss: 0.2207
+Epoch Completed in 53min 12s
+==> Epoch: 67
+Epoch 67 |  Loss: 0.2763
+Epoch Completed in 11min 18s
+==> Epoch: 68
+Epoch 68 |  Loss: 0.2724
+Epoch Completed in 11min 16s
+==> Epoch: 69
+Epoch 69 |  Loss: 0.2576
+Epoch Completed in 11min 20s
+==> Epoch: 70
+Epoch 70 |  Loss: 0.2720
+Epoch Completed in 11min 17s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 96.96% top_k: 96.35%
+==> Epoch: 71
+Epoch 71 |  Loss: 0.1720
+Epoch Completed in 11min 26s
+Saving..
+==> Epoch: 72
+Epoch 72 |  Loss: 0.1623
+Epoch Completed in 11min 19s
+Saving..
+==> Epoch: 73
+Epoch 73 |  Loss: 0.1336
+Epoch Completed in 11min 18s
+Saving..
+==> Epoch: 74
+Epoch 74 |  Loss: 0.1499
+Epoch Completed in 11min 25s
+==> Epoch: 75
+Epoch 75 |  Loss: 0.1334
+Epoch Completed in 11min 23s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 98.88% top_k: 97.04%
+Saving..
+==> Epoch: 76
+Epoch 76 |  Loss: 0.1172
+Epoch Completed in 11min 22s
+Saving..
+==> Epoch: 77
+Epoch 77 |  Loss: 0.1302
+Epoch Completed in 11min 22s
+==> Epoch: 78
+Epoch 78 |  Loss: 0.1252
+Epoch Completed in 11min 19s
+==> Epoch: 79
+Epoch 79 |  Loss: 0.1411
+Epoch Completed in 11min 26s
+==> Epoch: 80
+Epoch 80 |  Loss: 0.1827
+Epoch Completed in 11min 21s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 97.71% top_k: 98.39%
+==> Epoch: 81
+Epoch 81 |  Loss: 0.1691
+Epoch Completed in 11min 20s
+==> Epoch: 82
+Epoch 82 |  Loss: 0.1978
+Epoch Completed in 11min 22s
+==> Epoch: 83
+Epoch 83 |  Loss: 0.1308
+Epoch Completed in 11min 20s
+==> Epoch: 84
+Epoch 84 |  Loss: 0.1320
+Epoch Completed in 11min 26s
+==> Epoch: 85
+Epoch 85 |  Loss: 0.1447
+Epoch Completed in 11min 20s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 98.52% top_k: 98.08%
+==> Epoch: 86
+Epoch 86 |  Loss: 0.1389
+Epoch Completed in 11min 24s
+==> Epoch: 87
+Epoch 87 |  Loss: 0.1231
+Epoch Completed in 11min 20s
+==> Epoch: 88
+Epoch 88 |  Loss: 0.1452
+Epoch Completed in 11min 19s
+==> Epoch: 89
+Epoch 89 |  Loss: 0.1281
+Epoch Completed in 11min 22s
+==> Epoch: 90
+Epoch 90 |  Loss: 0.1553
+Epoch Completed in 11min 19s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 98.65% top_k: 98.05%
+==> Epoch: 91
+Epoch 91 |  Loss: 0.1370
+Epoch Completed in 11min 26s
+==> Epoch: 92
+Epoch 92 |  Loss: 0.1272
+Epoch Completed in 11min 22s
+==> Epoch: 93
+Epoch 93 |  Loss: 0.1429
+Epoch Completed in 11min 21s
+==> Epoch: 94
+Epoch 94 |  Loss: 0.1445
+Epoch Completed in 11min 23s
+==> Epoch: 95
+Epoch 95 |  Loss: 0.1173
+Epoch Completed in 11min 20s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 98.81% top_k: 99.05%
+==> Epoch: 96
+Epoch 96 |  Loss: 0.1282
+Epoch Completed in 11min 24s
+==> Epoch: 97
+Epoch 97 |  Loss: 0.1661
+Epoch Completed in 11min 24s
+==> Epoch: 98
+Epoch 98 |  Loss: 0.1844
+Epoch Completed in 11min 22s
+==> Epoch: 99
+Epoch 99 |  Loss: 0.1663
+Epoch Completed in 11min 23s
+==> Epoch: 100
+Epoch 100 |  Loss: 0.1478
+Epoch Completed in 11min 19s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 98.64% top_k: 97.92%
+==> Epoch: 101
+Epoch 101 |  Loss: 0.1262
+Epoch Completed in 11min 21s
+==> Epoch: 102
+Epoch 102 |  Loss: 0.1257
+Epoch Completed in 11min 20s
+==> Epoch: 103
+Epoch 103 |  Loss: 0.1634
+Epoch Completed in 11min 31s
+==> Epoch: 104
+Epoch 104 |  Loss: 0.1421
+Epoch Completed in 65min 27s
+==> Epoch: 105
+Epoch 105 |  Loss: 0.1563
+Epoch Completed in 11min 20s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 95.45% top_k: 95.36%
+==> Epoch: 106
+Epoch 106 |  Loss: 0.1387
+Epoch Completed in 11min 21s
+==> Epoch: 107
+Epoch 107 |  Loss: 0.0908
+Epoch Completed in 11min 19s
+Saving..
+==> Epoch: 108
+Epoch 108 |  Loss: 0.0759
+Epoch Completed in 11min 21s
+Saving..
+==> Epoch: 109
+Epoch 109 |  Loss: 0.0848
+Epoch Completed in 11min 25s
+==> Epoch: 110
+Epoch 110 |  Loss: 0.0858
+Epoch Completed in 11min 21s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.16% top_k: 99.26%
+==> Epoch: 111
+Epoch 111 |  Loss: 0.0634
+Epoch Completed in 11min 33s
+Saving..
+==> Epoch: 112
+Epoch 112 |  Loss: 0.0712
+Epoch Completed in 11min 47s
+==> Epoch: 113
+Epoch 113 |  Loss: 0.0652
+Epoch Completed in 11min 14s
+==> Epoch: 114
+Epoch 114 |  Loss: 0.0645
+Epoch Completed in 11min 19s
+==> Epoch: 115
+Epoch 115 |  Loss: 0.0775
+Epoch Completed in 11min 17s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.09% top_k: 98.27%
+==> Epoch: 116
+Epoch 116 |  Loss: 0.0566
+Epoch Completed in 11min 17s
+Saving..
+==> Epoch: 117
+Epoch 117 |  Loss: 0.0516
+Epoch Completed in 83min 42s
+Saving..
+==> Epoch: 118
+Epoch 118 |  Loss: 0.0685
+Epoch Completed in 14min 30s
+==> Epoch: 119
+Epoch 119 |  Loss: 0.0692
+Epoch Completed in 14min 10s
+==> Epoch: 120
+Epoch 120 |  Loss: 0.0807
+Epoch Completed in 14min 36s
+Code generated in 0min 18s 
+[Evaluate Phase] MAP: 99.10% top_k: 99.22%
+==> Epoch: 121
+Epoch 121 |  Loss: 0.0749
+Epoch Completed in 14min 22s
+==> Epoch: 122
+Epoch 122 |  Loss: 0.0726
+Epoch Completed in 14min 35s
+==> Epoch: 123
+Epoch 123 |  Loss: 0.0602
+Epoch Completed in 28min 43s
+==> Epoch: 124
+Epoch 124 |  Loss: 0.0644
+Epoch Completed in 17min 9s
+==> Epoch: 125
+Epoch 125 |  Loss: 0.0688
+Epoch Completed in 11min 20s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 98.71% top_k: 98.95%
+==> Epoch: 126
+Epoch 126 |  Loss: 0.0813
+Epoch Completed in 65min 52s
+==> Epoch: 127
+Epoch 127 |  Loss: 0.0900
+Epoch Completed in 38min 48s
+==> Epoch: 128
+Epoch 128 |  Loss: 0.0821
+Epoch Completed in 11min 19s
+==> Epoch: 129
+Epoch 129 |  Loss: 0.0856
+Epoch Completed in 47min 8s
+==> Epoch: 130
+Epoch 130 |  Loss: 0.0682
+Epoch Completed in 17min 5s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.29% top_k: 98.48%
+==> Epoch: 131
+Epoch 131 |  Loss: 0.0696
+Epoch Completed in 11min 17s
+==> Epoch: 132
+Epoch 132 |  Loss: 0.0632
+Epoch Completed in 11min 16s
+==> Epoch: 133
+Epoch 133 |  Loss: 0.0679
+Epoch Completed in 11min 17s
+==> Epoch: 134
+Epoch 134 |  Loss: 0.0609
+Epoch Completed in 11min 15s
+==> Epoch: 135
+Epoch 135 |  Loss: 0.0632
+Epoch Completed in 11min 21s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 98.82% top_k: 99.05%
+==> Epoch: 136
+Epoch 136 |  Loss: 0.0859
+Epoch Completed in 12min 25s
+==> Epoch: 137
+Epoch 137 |  Loss: 0.0788
+Epoch Completed in 12min 46s
+==> Epoch: 138
+Epoch 138 |  Loss: 0.0873
+Epoch Completed in 12min 47s
+==> Epoch: 139
+Epoch 139 |  Loss: 0.0521
+Epoch Completed in 13min 29s
+==> Epoch: 140
+Epoch 140 |  Loss: 0.0668
+Epoch Completed in 13min 8s
+Code generated in 0min 12s 
+[Evaluate Phase] MAP: 99.30% top_k: 99.35%
+==> Epoch: 141
+Epoch 141 |  Loss: 0.0442
+Epoch Completed in 12min 56s
+Saving..
+==> Epoch: 142
+Epoch 142 |  Loss: 0.0422
+Epoch Completed in 13min 5s
+Saving..
+==> Epoch: 143
+Epoch 143 |  Loss: 0.0331
+Epoch Completed in 12min 20s
+Saving..
+==> Epoch: 144
+Epoch 144 |  Loss: 0.0378
+Epoch Completed in 11min 26s
+==> Epoch: 145
+Epoch 145 |  Loss: 0.0348
+Epoch Completed in 11min 17s
+Code generated in 0min 8s 
+[Evaluate Phase] MAP: 99.47% top_k: 99.39%
+==> Epoch: 146
+Epoch 146 |  Loss: 0.0317
+Epoch Completed in 14min 17s
+Saving..
+==> Epoch: 147
+Epoch 147 |  Loss: 0.0265
+Epoch Completed in 15min 7s
+Saving..
+==> Epoch: 148
+Epoch 148 |  Loss: 0.0200
+Epoch Completed in 14min 51s
+Saving..
+==> Epoch: 149
+Epoch 149 |  Loss: 0.0304
+Epoch Completed in 14min 29s
+==> Epoch: 150
+Epoch 150 |  Loss: 0.0368
+Epoch Completed in 13min 45s
+Code generated in 0min 15s 
+[Evaluate Phase] MAP: 99.48% top_k: 99.42%
+==> Epoch: 151
+Epoch 151 |  Loss: 0.0366
+Epoch Completed in 13min 46s
+==> Epoch: 152
+Epoch 152 |  Loss: 0.0340
+Epoch Completed in 14min 60s
+==> Epoch: 153
+Epoch 153 |  Loss: 0.0299
+Epoch Completed in 14min 24s
+==> Epoch: 154
+Epoch 154 |  Loss: 0.0270
+Epoch Completed in 11min 12s
+==> Epoch: 155
+Epoch 155 |  Loss: 0.0242
+Epoch Completed in 11min 9s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.51% top_k: 99.43%
+==> Epoch: 156
+Epoch 156 |  Loss: 0.0309
+Epoch Completed in 11min 10s
+==> Epoch: 157
+Epoch 157 |  Loss: 0.0274
+Epoch Completed in 11min 15s
+==> Epoch: 158
+Epoch 158 |  Loss: 0.0285
+Epoch Completed in 11min 11s
+==> Epoch: 159
+Epoch 159 |  Loss: 0.0236
+Epoch Completed in 11min 9s
+==> Epoch: 160
+Epoch 160 |  Loss: 0.0229
+Epoch Completed in 11min 8s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.59% top_k: 99.50%
+==> Epoch: 161
+Epoch 161 |  Loss: 0.0237
+Epoch Completed in 11min 10s
+==> Epoch: 162
+Epoch 162 |  Loss: 0.0249
+Epoch Completed in 11min 13s
+==> Epoch: 163
+Epoch 163 |  Loss: 0.0237
+Epoch Completed in 11min 12s
+==> Epoch: 164
+Epoch 164 |  Loss: 0.0200
+Epoch Completed in 11min 11s
+Saving..
+==> Epoch: 165
+Epoch 165 |  Loss: 0.0210
+Epoch Completed in 11min 11s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.53% top_k: 99.50%
+==> Epoch: 166
+Epoch 166 |  Loss: 0.0182
+Epoch Completed in 11min 12s
+Saving..
+==> Epoch: 167
+Epoch 167 |  Loss: 0.0184
+Epoch Completed in 11min 15s
+==> Epoch: 168
+Epoch 168 |  Loss: 0.0305
+Epoch Completed in 11min 12s
+==> Epoch: 169
+Epoch 169 |  Loss: 0.0185
+Epoch Completed in 11min 20s
+==> Epoch: 170
+Epoch 170 |  Loss: 0.0211
+Epoch Completed in 11min 22s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.56% top_k: 99.48%
+==> Epoch: 171
+Epoch 171 |  Loss: 0.0200
+Epoch Completed in 11min 17s
+==> Epoch: 172
+Epoch 172 |  Loss: 0.0210
+Epoch Completed in 11min 18s
+==> Epoch: 173
+Epoch 173 |  Loss: 0.0215
+Epoch Completed in 11min 13s
+==> Epoch: 174
+Epoch 174 |  Loss: 0.0184
+Epoch Completed in 11min 16s
+==> Epoch: 175
+Epoch 175 |  Loss: 0.0193
+Epoch Completed in 11min 15s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.59% top_k: 99.47%
+==> Epoch: 176
+Epoch 176 |  Loss: 0.0192
+Epoch Completed in 11min 15s
+==> Epoch: 177
+Epoch 177 |  Loss: 0.0177
+Epoch Completed in 11min 16s
+Saving..
+==> Epoch: 178
+Epoch 178 |  Loss: 0.0167
+Epoch Completed in 11min 18s
+Saving..
+==> Epoch: 179
+Epoch 179 |  Loss: 0.0163
+Epoch Completed in 11min 18s
+Saving..
+==> Epoch: 180
+Epoch 180 |  Loss: 0.0157
+Epoch Completed in 11min 16s
+Code generated in 0min 10s 
+[Evaluate Phase] MAP: 99.61% top_k: 99.48%
+Saving..
+==> Epoch: 181
+Epoch 181 |  Loss: 0.0120
+Epoch Completed in 11min 15s
+Saving..
+==> Epoch: 182
+Epoch 182 |  Loss: 0.0136
+Epoch Completed in 11min 16s
+==> Epoch: 183
+Epoch 183 |  Loss: 0.0153
+Epoch Completed in 11min 18s
+==> Epoch: 184
+Epoch 184 |  Loss: 0.0139
+Epoch Completed in 11min 18s
+==> Epoch: 185
+Epoch 185 |  Loss: 0.0144
+Epoch Completed in 11min 16s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.57% top_k: 99.41%
+==> Epoch: 186
+Epoch 186 |  Loss: 0.0149
+Epoch Completed in 11min 17s
+==> Epoch: 187
+Epoch 187 |  Loss: 0.0141
+Epoch Completed in 11min 21s
+==> Epoch: 188
+Epoch 188 |  Loss: 0.0122
+Epoch Completed in 11min 15s
+==> Epoch: 189
+Epoch 189 |  Loss: 0.0154
+Epoch Completed in 11min 19s
+==> Epoch: 190
+Epoch 190 |  Loss: 0.0119
+Epoch Completed in 11min 16s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.57% top_k: 99.46%
+Saving..
+==> Epoch: 191
+Epoch 191 |  Loss: 0.0151
+Epoch Completed in 11min 16s
+==> Epoch: 192
+Epoch 192 |  Loss: 0.0115
+Epoch Completed in 11min 20s
+Saving..
+==> Epoch: 193
+Epoch 193 |  Loss: 0.0147
+Epoch Completed in 11min 20s
+==> Epoch: 194
+Epoch 194 |  Loss: 0.0109
+Epoch Completed in 11min 21s
+Saving..
+==> Epoch: 195
+Epoch 195 |  Loss: 0.0128
+Epoch Completed in 11min 16s
+Code generated in 0min 9s 
+[Evaluate Phase] MAP: 99.63% top_k: 99.51%
+==> Epoch: 196
+Epoch 196 |  Loss: 0.0135
+Epoch Completed in 11min 37s
+==> Epoch: 197
+Epoch 197 |  Loss: 0.0144
+Epoch Completed in 11min 50s
+==> Epoch: 198
+Epoch 198 |  Loss: 0.0149
+Epoch Completed in 11min 47s
+==> Epoch: 199
+Epoch 199 |  Loss: 0.0118
+Epoch Completed in 11min 50s
+==> Epoch: 200
+Epoch 200 |  Loss: 0.0111
+Epoch Completed in 11min 47s
+Code generated in 0min 10s 
+[Evaluate Phase] MAP: 99.58% top_k: 99.45%
+Training Completed in 3412min 28s
+Best mAP 0.0000 at epoch 194
+Model saved as model_facescrub.tar 
+

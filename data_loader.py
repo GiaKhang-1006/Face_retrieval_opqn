@@ -4,7 +4,7 @@ from torchvision import datasets
 
 import os
 
-def get_datasets_transform(dataset, data_dir="./data", cross_eval=False):
+def get_datasets_transform(dataset, data_dir="./dataset", cross_eval=False):
     to_tensor = transforms.ToTensor()
     if dataset!="vggface2":
         trainPaths = os.path.join(data_dir, dataset, "train") 

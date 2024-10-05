@@ -31,10 +31,11 @@ parser.add_argument('--margin', default=0.5, type=float, help='margin of cosine 
 parser.add_argument('--miu', default=0.1, type=float, help='Balance weight of reduncy loss')
 
 
+
 args = parser.parse_args()
 
-trainset, testset = get_datasets_transform(args.dataset, cross_eval=args.c)['dataset']
-transform_train, transform_test = get_datasets_transform(args.dataset, cross_eval=args.c)['transform']
+trainset, testset = get_datasets_transform(args.dataset, cross_eval=args.cross_dataset)['dataset']
+transform_train, transform_test = get_datasets_transform(args.dataset, cross_eval=args.cross_dataset)['transform']
 
 train_loader = torch.utils.data.DataLoader(trainset, batch_size=args.bs, shuffle=True, pin_memory=True, num_workers=4)
 test_loader = torch.utils.data.DataLoader(testset, batch_size=args.bs, shuffle=False, pin_memory=True, num_workers=4)
@@ -83,7 +84,7 @@ def train(save_path, length, num, words, feature_dim):
     for i in range(1, num):
         code_books[i] = matrix @ code_books[i-1]
 
-    if args.c or args.dataset == "vggface2":
+    if args.cross_dataset or args.dataset == "vggface2":
 
         net = resnet20_pq(num_layers=20, feature_dim=feature_dim)
         metric = OrthoPQ(in_features=feature_dim, out_features=num_classes, num_books=num, code_books=code_books, num_words=words, sc=40, m=args.margin)
@@ -129,7 +130,7 @@ def train(save_path, length, num, words, feature_dim):
         scheduler.adjust(optimizer, epoch)
         start = time.time()
         for batch_idx, (inputs, targets) in enumerate(train_loader):
-            inputs, targets = inputs.cuda(), targets.cuda()
+            inputs, targets = inputs.to(device), targets.to(device)
             transformed_images = transform_train(inputs)
             features = net(transformed_images)
             output1, output2, xc_probs = metric(features, targets)
@@ -262,7 +263,7 @@ if __name__ == "__main__":
                     feature_dim=num_s * words_s
             test(args.load[i], args.len[i], num_s, words_s, feature_dim=feature_dim)
     else:
-        assert len(args.save) == len(args.num) and len(args.save) == len(args.words), 'model paths must be in line with # code lengths'
+        assert len(args.save) == len(args.num) and len(args.save)    == len(args.words), 'model paths must be in line with # code lengths'
         for i, (num_s, words_s) in enumerate(zip(args.num, args.words)):
             sys.stdout = Logger(os.path.join(save_dir,
                 str(args.len[i]) + 'bits' + '_' + args.dataset + '_' + datetime.now().strftime('%m%d%H%M') + '.txt'))
@@ -278,6 +279,8 @@ if __name__ == "__main__":
                 feature_dim=num_s * words_s
           
             train(args.save[i], args.len[i], num_s, words_s, feature_dim=feature_dim)
+
+
 
 
 

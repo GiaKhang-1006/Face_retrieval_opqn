@@ -26,11 +26,11 @@ def get_mean_and_std(transform, dataset):
     Now enable GPU acceleration
     '''
     dataloader = DataLoader(dataset, batch_size=256, shuffle=True, num_workers=4, drop_last=True)
-    mean = torch.zeros(3).cuda()
-    std = torch.zeros(3).cuda()
+    mean = torch.zeros(3).to(device)
+    std = torch.zeros(3).to(device)
     print('==> Computing mean and std..')
     for inputs, targets in dataloader:
-        inputs = inputs.cuda()
+        inputs = inputs.to(device)
         inputs_transform = transform(inputs)
         for i in range(3):
             mean[i] += inputs_transform[:,i,:,:].mean()
@@ -180,9 +180,9 @@ def compute_mAP(trn_binary, tst_binary, trn_label, tst_label, device, use_gpu=Tr
             print("%d%% completed" % (10*percent))
             percent+=1
 
-    top_mAP = torch.mean(torch.Tensor(top_p).cuda())
+    top_mAP = torch.mean(torch.Tensor(top_p).to(device))
 
-    mAP = torch.mean(torch.Tensor(AP).cuda())
+    mAP = torch.mean(torch.Tensor(AP).to(device))
     return mAP, top_mAP
 
 
@@ -265,9 +265,9 @@ def evaluation_euclidean_distance(train_labels, test_labels, train_bits, test_bi
             top_p.append(1.0*N_top/top)
 
 
-    top_mAP = torch.mean(torch.Tensor(top_p).cuda())
+    top_mAP = torch.mean(torch.Tensor(top_p).to(device))
 
-    mAP = torch.mean(torch.Tensor(AP).cuda())
+    mAP = torch.mean(torch.Tensor(AP).to(device))
 
     if top is not None:
         print('[Evaluate Phase] MAP: %.2f%% top_k: %.2f%% \n' % (100. * float(mAP), 100. * float(top_mAP)))
@@ -305,9 +305,9 @@ def eval_cos_dst(train_labels, test_labels, train_features, test_features, devic
             N_top = torch.sum(top_correct)
             top_p.append(1.0*N_top/top)
 
-    top_mAP = torch.mean(torch.Tensor(top_p).cuda())
+    top_mAP = torch.mean(torch.Tensor(top_p).to(device))
 
-    mAP = torch.mean(torch.Tensor(AP).cuda())
+    mAP = torch.mean(torch.Tensor(AP).to(device))
 
     if top is not None:
         print('[Evaluate Phase] MAP: %.2f%% top_k: %.2f%% \n' % (100. * float(mAP), 100. * float(top_mAP)))
@@ -316,7 +316,7 @@ def eval_cos_dst(train_labels, test_labels, train_features, test_features, devic
 
 
 def EncodingOnehot(target, nclasses):
-    target_onehot = torch.Tensor(target.size(0), nclasses).cuda()
+    target_onehot = torch.Tensor(target.size(0), nclasses).to(device)
     target_onehot.zero_()
     target_onehot.scatter_(1, target.view(-1, 1), 1)
     return target_onehot
@@ -348,6 +348,7 @@ def draw_topK(trainset, trn_binary, tst_binary, trn_label, tst_label, device, to
     collect_2 = []
     dict0 = defaultdict(list)
     dict1 = defaultdict(list)
+
     dict2 = defaultdict(list)
 
     for i in range(tst_binary.size(0)):
@@ -570,8 +571,8 @@ def PqDistRet(test_features, test_labels, train_labels, code_book, index_table, 
         # time_elapsed = time.time() - start
         # print("Compute {}-th sample in {:.0f}min {:.0f}s ".format(j, time_elapsed // 60, time_elapsed % 60))
 
-    top_mAP = torch.mean(torch.Tensor(top_p).cuda())
-    mAP = torch.mean(torch.Tensor(AP).cuda())
+    top_mAP = torch.mean(torch.Tensor(top_p).to(device))
+    mAP = torch.mean(torch.Tensor(AP).to(device))
 
 
     return mAP, top_mAP
@@ -624,8 +625,8 @@ def PqDistRet_euclidean(test_features, test_labels, train_labels, index_table, m
             top_p.append(1.0*N_top/top)
 
 
-    top_mAP = torch.mean(torch.Tensor(top_p).cuda())
-    mAP = torch.mean(torch.Tensor(AP).cuda())
+    top_mAP = torch.mean(torch.Tensor(top_p).to(device))
+    mAP = torch.mean(torch.Tensor(AP).to(device))
 
     return mAP, top_mAP
 
@@ -674,8 +675,8 @@ def PqDistRet_Ortho_euclidean(test_features, test_labels, train_labels, index_ta
             top_p.append(1.0*N_top/top)
 
 
-    top_mAP = torch.mean(torch.Tensor(top_p).cuda())
-    mAP = torch.mean(torch.Tensor(AP).cuda())
+    top_mAP = torch.mean(torch.Tensor(top_p).to(device))
+    mAP = torch.mean(torch.Tensor(AP).to(device))
 
     return mAP, top_mAP
 
@@ -716,8 +717,8 @@ def PqDistRet_Ortho(test_features, test_labels, train_labels, index_table, mlp, 
             top_p.append(1.0*N_top/top)
 
 
-    top_mAP = torch.mean(torch.Tensor(top_p).cuda())
-    mAP = torch.mean(torch.Tensor(AP).cuda())
+    top_mAP = torch.mean(torch.Tensor(top_p).to(device))
+    mAP = torch.mean(torch.Tensor(AP).to(device))
 
     return mAP, top_mAP
 
@@ -883,8 +884,8 @@ def PqDistRet_Ortho2(test_features, test_labels, train_labels, index_table, mlp,
             percent+=1
         '''
 
-    top_mAP = torch.mean(torch.Tensor(top_p).cuda())
-    mAP = torch.mean(torch.Tensor(AP).cuda())
+    top_mAP = torch.mean(torch.Tensor(top_p).to(device))
+    mAP = torch.mean(torch.Tensor(AP).to(device))
 
     return mAP, top_mAP
 
@@ -924,7 +925,7 @@ def compute_topk(trainset, test_features, test_labels, train_labels, index_table
             for k in range(top):
                 dict1[j].append(trainset.imgs[top_result[k]][0])
 
-    # top_k = torch.Tensor(top_p).cuda()
+    # top_k = torch.Tensor(top_p).to(device)
     results = results.cpu().data.numpy()
     return results, dict0, dict1
 

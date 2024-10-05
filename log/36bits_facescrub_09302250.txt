@@ -1,0 +1,19 @@
+[Configuration] Training on dataset: facescrub
+  Len_bits: 36
+ Batch_size: 256
+ learning rate: 0.100
+ num_books: 6
+ num_words: 64
+HyperParams:
+margin: 0.500	 miu: 0.1000
+==> Building model..
+number of identities:  2
+number of training images:  34288
+number of test images:  8836
+number of training batches per epoch: 134
+number of testing batches per epoch: 35
+num. of codebooks:  6
+num. of words per book:  64
+dim. of word:  86
+code length: 36-bit 	 learning rate: 0.100 	 scale length: 20 	 penalty margin: 0.50 	 balance_weight: 0.100
+==> Epoch: 1

@@ -52,7 +52,7 @@ class OrthoPQ(nn.Module):
         cosine_sww = cosine_sww.clamp(-1, 1)   # for numerical stability
         phi1 = cosine_xww - self.m
         phi2 = cosine_sww - self.m
-        one_hot = torch.zeros(cosine_sww.shape[1:], device='cuda')
+        one_hot = torch.zeros(cosine_sww.shape[1:], device='cpu')
         one_hot.scatter_(1, label.view(-1, 1).long(), 1)
         one_hot_all = one_hot.repeat(self.num_books, 1, 1)
 
